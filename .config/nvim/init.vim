@@ -4,10 +4,13 @@
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
+:set mouse=a
 
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'https://github.com/tc50cal/vim-terminal'
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/preservim/nerdtree'
@@ -34,6 +37,10 @@ Plug 'nvim-treesitter/nvim-treesitter'
 set encoding=UTF-8
 
 call plug#end()
+
+let g:airline_theme = 'wombat'
+" let g:airline_section_z = '%3p%%'
+let g:airline_section_z = "%p%%  %l/%L Col:%c"
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
