@@ -22,6 +22,8 @@ Plug 'https://github.com/neoclide/coc-prettier'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+Plug 'rust-lang/rust.vim'
+
 set encoding=UTF-8
 
 call plug#end()
