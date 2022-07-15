@@ -24,6 +24,13 @@ Plug 'thosakwe/vim-flutter'
 
 Plug 'rust-lang/rust.vim'
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Tree sitter
+Plug 'nvim-treesitter/nvim-treesitter'
+
 set encoding=UTF-8
 
 call plug#end()
