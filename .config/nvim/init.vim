@@ -13,7 +13,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'https://github.com/tc50cal/vim-terminal'
 Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/neoclide/coc.nvim'
 Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/preservim/tagbar'
@@ -34,6 +33,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter'
 
+" Vim Fugitive
+Plug 'https://github.com/tpope/vim-fugitive'
+
 set encoding=UTF-8
 
 call plug#end()
@@ -42,12 +44,16 @@ let g:airline_theme = 'wombat'
 " let g:airline_section_z = '%3p%%'
 let g:airline_section_z = "%p%%  %l/%L Col:%c"
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 nmap <F8> :TagbarToggle<CR>
+
+lua require("after")
 
 " autocmd VimEnter * NERDTree | wincmd p
