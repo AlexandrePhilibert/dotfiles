@@ -103,6 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
+alias dcu=docker-compose up
+alias dcd=docker-compose down
+
 # Yarn global packages
 
 export PATH="$(yarn global bin):$PATH"
