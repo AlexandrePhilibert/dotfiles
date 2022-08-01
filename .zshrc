@@ -108,8 +108,17 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 export PATH="$(yarn global bin):$PATH"
 . "$HOME/.cargo/env"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This load>
+
 export PATH="/var/opt/flutter/bin:$PATH"
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 eval "$(starship init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/alexandre/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
