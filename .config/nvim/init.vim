@@ -45,6 +45,9 @@ let g:airline_theme = 'wombat'
 " let g:airline_section_z = '%3p%%'
 let g:airline_section_z = "%p%%  %l/%L Col:%c"
 
+" Map the leader key to spacebar ("\" by default)
+:let mapleader = "\<Space>"
+
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
 " Telescope
