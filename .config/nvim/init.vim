@@ -37,6 +37,9 @@ Plug 'nvim-treesitter/nvim-treesitter'
 " Vim Fugitive
 Plug 'https://github.com/tpope/vim-fugitive'
 
+" Harpoon
+Plug 'ThePrimeagen/harpoon'
+
 set encoding=UTF-8
 
 call plug#end()
