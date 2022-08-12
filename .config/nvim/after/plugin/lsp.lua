@@ -7,6 +7,11 @@ cmp.setup({
             require('luasnip').lsp_expand(args.body)
         end,
     },
+    experimental = {
+        ghost_text = {
+            hl_group = 'Hint',
+        },
+    },
     formatting = {
         format = lspkind.cmp_format({
             maxwidth = 50,

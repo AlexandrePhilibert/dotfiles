@@ -25,6 +25,7 @@ hi("VertSplit", { ctermbg=6, ctermfg=0 })
 hi("MatchParen", { ctermbg=241, })
 hi("SpellLocal", { ctermbg=55, })
 hi("Search", { ctermfg=15, ctermbg=52 })
+hi("Hint", { ctermfg=60 })
 
 hi("DiffAdd", { ctermbg=4, ctermfg=15 })
 hi("DiffDelete", { ctermbg=5, ctermfg=14 })
