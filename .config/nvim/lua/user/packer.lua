@@ -22,4 +22,7 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
+
+    -- LSP Icons
+    use 'onsails/lspkind.nvim'
 end)
