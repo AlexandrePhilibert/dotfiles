@@ -1,11 +1,5 @@
 function hi(group, opts)
-    local c = "hi " .. group
-    
-    for k, v in pairs(opts) do
-        c = c .. " " .. k .. "=" .. v
-    end
-
-    vim.cmd(c)
+    vim.api.nvim_set_hl(0, group, opts);
 end
 
 vim.cmd("hi clear SignColumn")
