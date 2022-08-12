@@ -1,4 +1,5 @@
-vim.o.mouse = a
+vim.o.ma = true
+vim.o.mouse = "a"
 
 vim.o.relativenumber = true
 vim.o.number = true
@@ -12,6 +13,8 @@ vim.o.smartindent = true
 vim.o.wrap = false
 vim.o.swapfile = false
 vim.o.backup = false
+
+vim.o.clipboard = "unnamedplus"
 
 vim.g.mapleader = " "
 
