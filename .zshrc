@@ -125,3 +125,7 @@ eval "$(starship init zsh)"
 export PNPM_HOME="/home/alexandre/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Go
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:/usr/local/go/bin"
