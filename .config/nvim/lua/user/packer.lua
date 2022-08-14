@@ -29,4 +29,11 @@ require('packer').startup(function(use)
     -- Pairs
     use 'windwp/nvim-ts-autotag'
     use 'windwp/nvim-autopairs'
+
+    -- Prettier
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+
+    -- Git
+    use 'lewis6991/gitsigns.nvim' 
 end)

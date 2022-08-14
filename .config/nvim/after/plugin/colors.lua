@@ -32,4 +32,6 @@ hi("TabLineFill", { ctermbg=234, ctermfg=7, term=NONE, cterm=NONE })
 hi("TabLine", { ctermbg=236, ctermfg=230, term=NONE, cterm=NONE })
 hi("TabLineSel", { ctermbg=240, ctermfg=7, term=NONE, cterm=bold })
 
-
+hi("GitSignsAdd", { ctermfg=76 })
+hi("GitSignsChange", { ctermfg=214 })
+hi("GitSignsCurrentLineBlame", { ctermfg=233 })
