@@ -12,6 +12,12 @@ curl https://raw.githubusercontent.com/AlexandrePhilibert/dotfiles/main/scripts/
 pnpm add -g typescript typescript-language-server
 ```
 
+### Svelte
+
+```
+pnpm add -g svelte-language-server
+```
+
 ### Rust
 
 ```

@@ -47,18 +47,22 @@ local function on_attach()
     vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format, { buffer = 0})
 end
 
-require("lspconfig").tsserver.setup {
+local lspconfig = require("lspconfig")
+
+lspconfig.tsserver.setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
 
-require("lspconfig").rust_analyzer.setup {
+lspconfig.svelte.setup {}
+
+lspconfig.rust_analyzer.setup {
     cmd = { "rust-analyzer" },
     capabilities = capabilities,
     on_attach = on_attach,
 }
 
-require("lspconfig").gopls.setup {
+lspconfig.gopls.setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
