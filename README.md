@@ -30,3 +30,17 @@ chmod +x ~/.cargo/bin/rust-analyzer
 ```
  go install golang.org/x/tools/gopls@latest
 ```
+
+## Prettier
+
+For prettierd:
+
+```
+pnpm add -g @fsouza/prettierd
+```
+
+For prettier:
+
+```
+pnpm add -g prettier
+```
