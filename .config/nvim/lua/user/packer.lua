@@ -25,4 +25,8 @@ require('packer').startup(function(use)
 
     -- LSP Icons
     use 'onsails/lspkind.nvim'
+
+    -- Pairs
+    use 'windwp/nvim-ts-autotag'
+    use 'windwp/nvim-autopairs'
 end)
