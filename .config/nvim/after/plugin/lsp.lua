@@ -8,7 +8,6 @@ cmp.setup({
         end,
     },
     experimental = {
-        native_menu = false,
         ghost_text = {
             hl_group = 'Hint',
         },
@@ -25,11 +24,12 @@ cmp.setup({
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
+    -- max_item_count: The maximum number of suggestions for the given source
+    -- keyword_length: The number of character to type before suggestions start
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-    }, {
-        { name = 'buffer' },
+        { name = 'buffer', keyword_length = 5, max_item_count = 5 },
     })
 })
 
