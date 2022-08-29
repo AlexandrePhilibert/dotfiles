@@ -1,4 +1,4 @@
-local opts = { silent = true }
+local opts = { silent = true, noremap = true }
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end, opts)
@@ -15,3 +15,11 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope help_tags<CR>", opts)
+
+-- Move line up/down
+vim.keymap.set("n", "<A-j>", ":m +1<CR>", opts)
+vim.keymap.set("n", "<A-k>", ":m -2<CR>", opts)
+vim.keymap.set("v", "<A-j>", ":m'>+<CR>gv=gv", opts)
+vim.keymap.set("v", "<A-k>", ":m-2<CR>gv=gv", opts)
+vim.keymap.set("i", "<A-j>", "<Esc>:m+<CR>==gi", opts)
+vim.keymap.set("i", "<A-k>", "<Esc>:m-2<CR>==gi", opts)
