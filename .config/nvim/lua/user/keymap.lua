@@ -14,7 +14,6 @@ vim.keymap.set("n", "<leader>4", function() require("harpoon.ui").nav_file(4) en
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope help_tags<CR>", opts)
 
 -- Move line up/down
 vim.keymap.set("n", "<A-j>", ":m +1<CR>", opts)
