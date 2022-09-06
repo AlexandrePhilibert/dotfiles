@@ -16,7 +16,12 @@ require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter", {
         run = ":TSUpdate"
     })
-   
+
+    -- Theme
+    use("martinsione/darkplus.nvim")
+
+    use("lukas-reineke/indent-blankline.nvim")
+
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
