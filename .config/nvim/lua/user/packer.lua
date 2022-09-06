@@ -41,4 +41,7 @@ require('packer').startup(function(use)
 
     -- Git
     use 'lewis6991/gitsigns.nvim' 
+
+    -- Svelte
+    use 'evanleck/vim-svelte'
 end)
