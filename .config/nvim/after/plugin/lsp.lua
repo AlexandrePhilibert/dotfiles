@@ -57,6 +57,11 @@ lspconfig.tsserver.setup {
     on_attach = on_attach,
 }
 
+lspconfig.tailwindcss.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
+
 lspconfig.svelte.setup {}
 
 lspconfig.rust_analyzer.setup {
