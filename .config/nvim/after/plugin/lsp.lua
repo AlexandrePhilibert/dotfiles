@@ -36,7 +36,7 @@ cmp.setup({
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function on_attach(client, bufnr)
-    local bufopts = { noremap = true, silent=true, buffer=bufnr } 
+    local bufopts = { noremap = true, silent=true, buffer=bufnr }
 
     vim.keymap.set("n", "gh", vim.lsp.buf.hover, bufopts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
@@ -47,7 +47,7 @@ local function on_attach(client, bufnr)
     vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", bufopts)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, bufopts)
-    vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format, bufopts) 
+    vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format, bufopts)
 end
 
 local lspconfig = require("lspconfig")
@@ -60,6 +60,18 @@ lspconfig.tsserver.setup {
 lspconfig.tailwindcss.setup {
     capabilities = capabilities,
     on_attach = on_attach,
+}
+
+lspconfig.sumneko_lua.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
 }
 
 lspconfig.svelte.setup {}
