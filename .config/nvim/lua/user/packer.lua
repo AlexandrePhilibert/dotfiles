@@ -22,6 +22,9 @@ require('packer').startup(function(use)
 
     use("lukas-reineke/indent-blankline.nvim")
 
+    -- Mason
+    use 'williamboman/mason.nvim'
+
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -30,6 +33,14 @@ require('packer').startup(function(use)
 
     -- LSP Icons
     use 'onsails/lspkind.nvim'
+
+    use 'mfussenegger/nvim-dap'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use { 'rcarriga/nvim-dap-ui', 
+        requires = {
+            'mfussenegger/nvim-dap'
+        }
+    }
 
     -- Pairs
     use 'windwp/nvim-ts-autotag'
@@ -41,6 +52,7 @@ require('packer').startup(function(use)
 
     -- Git
     use 'lewis6991/gitsigns.nvim' 
+    use 'tpope/vim-fugitive'
 
     -- Svelte
     use 'evanleck/vim-svelte'
