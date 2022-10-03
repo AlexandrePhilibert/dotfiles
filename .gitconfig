@@ -31,3 +31,5 @@
 	remotes = remote -v
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
