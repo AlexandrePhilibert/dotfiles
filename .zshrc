@@ -93,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export PATH="$PATH:$HOME/scripts"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -103,12 +105,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
-alias dcu=docker-compose up
-alias dcd=docker-compose down
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
 
 # Yarn global packages
 
-export PATH="$(yarn global bin):$PATH"
+# export PATH="$(yarn global bin):$PATH"
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
@@ -129,3 +131,6 @@ export PATH="$PNPM_HOME:$PATH"
 # Go
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/usr/local/go/bin"
+
+# Clion
+export PATH="$PATH:/opt/clion-2022.2.3/bin"
