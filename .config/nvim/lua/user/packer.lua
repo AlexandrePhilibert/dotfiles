@@ -1,6 +1,6 @@
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    
+
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
@@ -36,7 +36,7 @@ require('packer').startup(function(use)
 
     use 'mfussenegger/nvim-dap'
     use 'theHamsta/nvim-dap-virtual-text'
-    use { 'rcarriga/nvim-dap-ui', 
+    use { 'rcarriga/nvim-dap-ui',
         requires = {
             'mfussenegger/nvim-dap'
         }
@@ -51,7 +51,7 @@ require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
 
     -- Git
-    use 'lewis6991/gitsigns.nvim' 
+    use 'lewis6991/gitsigns.nvim'
     use 'tpope/vim-fugitive'
 
     -- Svelte
