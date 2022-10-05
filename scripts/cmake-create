@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Bootstrap a new C++ project using CLion's defaults
+
+die () {
+    echo >&2 "$@"
+    exit 1
+}
+
+[ "$#" -eq 1 ] || die "project name required"
+
+FOLDER_NAME=$1
+PROJECT_PATH=$(pwd)/$FOLDER_NAME
+
+mkdir $PROJECT_PATH
+
+cat > $PROJECT_PATH/CMakeLists.txt << EOL
+cmake_minimum_required(VERSION $(cmake --version | grep -Eo '[0-9]\.[0-9].'))
+project($FOLDER_NAME)
+
+set(CMAKE_CXX_STANDARD 20)
+add_executable($FOLDER_NAME main.cpp)
+
+EOL
+
+cat > $PROJECT_PATH/main.cpp << EOL
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+    cout << "Hello World!" << endl; 
+
+    return EXIT_SUCCESS;
+}
+
+EOL
+
+cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja -S $PROJECT_PATH -B $PROJECT_PATH/cmake-build-debug 
