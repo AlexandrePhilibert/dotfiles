@@ -31,5 +31,11 @@
 	remotes = remote -v
 [init]
 	defaultBranch = main
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
 [core]
 	editor = nvim
+[include]
+    path = ~/.gitconfig_local
