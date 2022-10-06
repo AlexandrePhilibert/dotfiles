@@ -13,22 +13,23 @@ require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     -- Treesitter
-    use("nvim-treesitter/nvim-treesitter", {
-        run = ":TSUpdate"
+    use('nvim-treesitter/nvim-treesitter', {
+        run = ':TSUpdate'
     })
 
     -- Theme
-    use("martinsione/darkplus.nvim")
+    use 'martinsione/darkplus.nvim'
 
-    use("lukas-reineke/indent-blankline.nvim")
+    use 'lukas-reineke/indent-blankline.nvim'
 
     -- Mason
     use 'williamboman/mason.nvim'
 
     -- LSP
+    use 'hrsh7th/nvim-cmp'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/nvim-cmp'
+    use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
 
     -- LSP Icons

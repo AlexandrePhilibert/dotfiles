@@ -1,0 +1,13 @@
+{
+    "name": "custom-snippets",
+    "version": "1.0.0",
+    "description": "Snippets for PRG1",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "cpp",
+                "path": "./prg1.json"
+            }
+        ]
+    }
+}

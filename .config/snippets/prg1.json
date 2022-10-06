@@ -1,0 +1,17 @@
+{
+    "File Header": {
+        "prefix": "header",
+        "body": [
+            "//---------------------------------------------------------",
+            "// Fichier        : $1",
+            "// Auteur(s)      : Philibert Alexandre",
+            "// Date           : $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}",
+            "// But            : $2",
+            "// Modifications  : $3",
+            "// Remarque(s)    : $4",
+            "//---------------------------------------------------------"
+        ],
+        "scope": "cpp",
+        "description": "Generate the file header comment for PRG1"
+    }
+}

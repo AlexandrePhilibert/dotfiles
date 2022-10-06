@@ -1,10 +1,14 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
+local luasnip = require('luasnip')
+local lspconfig = require("lspconfig")
+local cmp_nvim_slp = require('cmp_nvim_lsp')
 
 cmp.setup({
+    completion = { completeopt = "menu,menuone,noinsert", keyword_length = 1 },
     snippet = {
         expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+           luasnip.lsp_expand(args.body)
         end,
     },
     experimental = {
@@ -33,7 +37,7 @@ cmp.setup({
     })
 })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim_slp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function on_attach(client, bufnr)
     local bufopts = { noremap = true, silent=true, buffer=bufnr }
@@ -50,17 +54,14 @@ local function on_attach(client, bufnr)
     vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format, bufopts)
 end
 
-local lspconfig = require("lspconfig")
+local servers = { 'tsserver', 'tailwindcss', 'svelte', 'gopls', 'clangd' }
 
-lspconfig.tsserver.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-}
-
-lspconfig.tailwindcss.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-}
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        capabilities = capabilities,
+        on_attach = on_attach
+    }
+end
 
 lspconfig.sumneko_lua.setup {
     capabilities = capabilities,
@@ -74,19 +75,9 @@ lspconfig.sumneko_lua.setup {
     }
 }
 
-lspconfig.svelte.setup {}
-
 lspconfig.rust_analyzer.setup {
     cmd = { "rust-analyzer" },
     capabilities = capabilities,
     on_attach = on_attach,
 }
 
-lspconfig.gopls.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-}
-
-lspconfig.clangd.setup {
-    on_attach = on_attach,
-}
