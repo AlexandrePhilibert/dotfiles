@@ -18,7 +18,8 @@ require('packer').startup(function(use)
     })
 
     -- Theme
-    use 'martinsione/darkplus.nvim'
+    -- use 'martinsione/darkplus.nvim'
+    use 'Mofiqul/vscode.nvim'
 
     use 'lukas-reineke/indent-blankline.nvim'
 
@@ -57,4 +58,12 @@ require('packer').startup(function(use)
 
     -- Svelte
     use 'evanleck/vim-svelte'
+
+    -- Terminal
+    use { "akinsho/toggleterm.nvim",
+        tag = '*',
+        config = function()
+            require("toggleterm").setup()
+        end
+    }
 end)

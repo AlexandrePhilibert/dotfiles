@@ -37,7 +37,7 @@ cmp.setup({
     })
 })
 
-local capabilities = cmp_nvim_slp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim_slp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function on_attach(client, bufnr)
     local bufopts = { noremap = true, silent=true, buffer=bufnr }
@@ -63,7 +63,7 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
