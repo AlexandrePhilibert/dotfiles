@@ -1,15 +1,15 @@
-local telescope = require('telescope');
+local telescope = require("telescope")
 
 local opts = { silent = true, noremap = true }
 
-telescope.setup {
-    pickers = {
-        find_files = {
-            -- find hidden files expect for .git
-            find_command = { 'rg', '--files', '--hidden', '-g', '!.git' }
-        }
-    }
-}
+telescope.setup({
+	pickers = {
+		find_files = {
+			-- find hidden files expect for .git
+			find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
+		},
+	},
+})
 
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
