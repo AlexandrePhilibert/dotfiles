@@ -6,6 +6,19 @@ require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 
+	use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
+
+	use({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("dashboard").setup({
+				change_to_vcs_root = true,
+			})
+		end,
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
+
 	-- Harpoon
 	use("ThePrimeagen/harpoon")
 
@@ -71,4 +84,6 @@ require("packer").startup(function(use)
 
 	-- Copilot
 	use("github/copilot.vim")
+
+	use("mbbill/undotree")
 end)
