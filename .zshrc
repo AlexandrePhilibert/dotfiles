@@ -108,6 +108,8 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 
+alias k="kubectl"
+
 # Yarn global packages
 
 # export PATH="$(yarn global bin):$PATH"
@@ -134,3 +136,8 @@ export PATH="$PATH:/usr/local/go/bin"
 
 # Clion
 export PATH="$PATH:/opt/clion-2022.2.3/bin"
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
