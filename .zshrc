@@ -107,6 +107,7 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
+alias dcs="docker-compose stop"
 
 alias k="kubectl"
 
@@ -131,8 +132,7 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # Go
-export PATH="$PATH:$HOME/go/bin"
-export PATH="$PATH:/usr/local/go/bin"
+export PATH=$PATH:/usr/local/go/bin
 
 # Clion
 export PATH="$PATH:/opt/clion-2022.2.3/bin"
