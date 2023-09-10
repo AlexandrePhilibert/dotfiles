@@ -141,3 +141,6 @@ export PATH="$PATH:/opt/clion-2022.2.3/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Flutter
+export PATH=$PATH:/opt/flutter/bin
