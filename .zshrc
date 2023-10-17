@@ -105,11 +105,13 @@ export PATH="$PATH:$HOME/scripts"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
-alias dcu="docker-compose up"
-alias dcd="docker-compose down"
-alias dcs="docker-compose stop"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcs="docker compose stop"
 
 alias k="kubectl"
+
+alias up="cd .."
 
 # Yarn global packages
 
