@@ -4,6 +4,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "window.titleBarStyle": "custom",
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.codeActionsOnSave": {
@@ -39,13 +40,6 @@
   "editor.rulers": [80],
   "editor.inlineSuggest.enabled": true,
   "terminal.integrated.fontFamily": "'FiraMono Nerd Font Mono'",
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": true,
-    "rust": false
-  },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust"
   },
@@ -53,7 +47,6 @@
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
-  "window.zoomLevel": 1,
   "gitlens.views.worktrees.files.layout": "list",
   "terminal.integrated.profiles.linux": {
     "bash": null,
@@ -63,5 +56,24 @@
       "icon": "terminal-tmux"
     }
   },
-  "terminal.integrated.defaultProfile.linux": "tmux"
+  "terminal.integrated.defaultProfile.linux": "tmux",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "redhat.telemetry.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "raynigon.nginx-formatter"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "editor.mouseWheelZoom": true,
+  "go.toolsManagement.autoUpdate": true,
+  "window.zoomLevel": 1
 }
